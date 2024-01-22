@@ -29,6 +29,6 @@ is_swapped = true;
 }
 }
 if (is_swapped == false)
-break;
+return;
 }
 }

@@ -20,7 +20,7 @@ for (i = 0 ; i < size - 1 ; i++)
 is_swapped = false;
 for (j = 0 ; j < size - i - 1 || j + 1 != size ; j++)
 {
-if ((array[j] > array[j + 1]))
+if (array[j] > array[j + 1])
 {
 temp = array[j];
 array[j] = array[j + 1];

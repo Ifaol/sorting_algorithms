@@ -28,12 +28,18 @@ for (j = low; j < high; j++)
 if (array[j] <= pivot)
 {
 i++;
+if (i != j)
+{
 swap(&array[i], &array[j]);
 print_array(array, size);
 }
 }
+}
+if ((i + 1) != high)
+{
 swap(&array[i + 1], &array[high]);
 print_array(array, size);
+}
 return (i + 1);
 }
 /**

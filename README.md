@@ -1,63 +1,60 @@
-0x1B. C - Sorting algorithms & Big O
+# 0x1B. C - Sorting Algorithms & Big O
 
+![Terminal GIF](path/to/terminal.gif)
 
-Background Context
-   
-This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
+## Background Context
 
-Resources
-   
-Read or watch:
+This project is a collaborative effort, meant to be completed by groups of two students. Each pair is required to work together to complete at least the mandatory tasks, with an emphasis on understanding sorting algorithms and their time complexity.
 
-Sorting algorithm
-Big O notation
-Sorting algorithms animations
-15 sorting algorithms in 6 minutes (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
-CS50 Algorithms explanation in detail by David Malan
-All about sorting algorithms
-   
-Learning Objectives
-   
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-  
-General
-    
-At least four different sorting algorithms
-What is the Big O notation, and how to evaluate the time complexity of an algorithm
-How to select the best sorting algorithm for a given input
-What is a stable sorting algorithm
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-  
-Requirements
-   
-General
-   
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, … is totally forbidden.
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called sort.h
-Don’t forget to push your header file
-All your header files should be include guarded
-A list/array does not need to be sorted if its size is less than 2.
-GitHub
-There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
-  
-More Info
-  
-Data Structure and Functions
-  
-For this project you are given the following print_array, and print_list functions:
-   
+## Resources
+
+Refer to the following resources for detailed explanations:
+
+- [Sorting Algorithms](https://example.com)
+- [Big O Notation](https://example.com)
+- [Sorting Algorithms Animations](https://example.com)
+- CS50's [Algorithm Explanation by David Malan](https://example.com)
+
+*Warning*: Some visualizations may contain flashing images, which can trigger seizures for people with epilepsy.
+
+## Learning Objectives
+
+By the end of this project, you should be able to:
+
+- Describe at least four different sorting algorithms
+- Understand Big O notation and how to evaluate an algorithm's time complexity
+- Choose the optimal sorting algorithm based on input characteristics
+- Define what makes a sorting algorithm "stable"
+
+## Requirements
+
+### General
+
+- Editors allowed: `vi`, `vim`, `emacs`
+- Compilation on Ubuntu 20.04 LTS with `gcc`, using `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Each file should end with a newline
+- Your code must follow the **Betty** style guidelines (`betty-style.pl` and `betty-doc.pl` will be used for checking)
+- No global variables allowed
+- Maximum of 5 functions per file
+- Standard libraries are not allowed (e.g., `printf`, `puts`)
+- Example `main.c` files shown are for testing purposes only and should not be pushed
+
+### Header File
+
+All function prototypes should be declared in `sort.h`, which must be include-guarded. Be sure to push this header file to your repository.
+
+### GitHub
+
+- Each group should maintain a single repository for the project
+- Avoid cloning/forking a project repository with the same name before the deadline to avoid a 0% score
+
+## Data Structure and Functions
+
+### Functions
+
+This project provides `print_array` and `print_list` functions to assist in testing your code:
+
+```c
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -81,6 +78,7 @@ void print_array(const int *array, size_t size)
     }
     printf("\n");
 }
+
 #include <stdio.h>
 #include "sort.h"
 
@@ -104,11 +102,14 @@ void print_list(const listint_t *list)
     }
     printf("\n");
 }
-   
-Our files print_array.c and print_list.c (containing the print_array and print_list functions) will be compiled with your functions during the correction.
-Please declare the prototype of the functions print_array and print_list in your sort.h header file
-Please use the following data structure for doubly linked list:
-  
+```
+These functions will be compiled with your sorting algorithms during grading. Include the prototypes in `sort.h`.
+
+### Data Structure for Linked List
+
+The following structure defines a doubly linked list node:
+
+```c
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -122,19 +123,23 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
-Please, note this format is used for Quiz and Task questions.
+```
+### Big O Notation
+
+Please use concise Big O notation, omitting constants. Examples:
+
+- O(1)
+- O(n)
+- O(n^2)
+- O(log(n))
+- O(n log(n))
   
-O(1)
-O(n)
-O(n!)
-n square -> O(n^2)
-log(n) -> O(log(n))
-n * log(n) -> O(nlog(n))
-n + k -> O(n+k)
-…
-  
-Please use the “short” notation (don’t use constants). Example: O(nk) or O(wn) should be written O(n). If an answer is required within a file, all your answers files must have a newline at the end.
-  
-Tests
-  
-Here is a quick tip to help you test your sorting algorithms with big sets of random integers: Random.org
+For file-based answers, ensure each file ends with a newline.
+
+### Testing
+
+For testing your sorting algorithms with large data sets of random integers, you may use resources like [Random.org](https://random.org).
+
+## Disclaimer
+
+This project requires original work; copying solutions will result in a zero score and potential removal from the program. Plagiarism is strictly prohibited, and sharing project content publicly is not allowed.
